@@ -57,7 +57,16 @@ void draw() {
     switch (keyCode) {
       case RIGHT:
         selected_character.move_right(5);
-        break;            
+        break;
+      case LEFT:
+        selected_character.move_left(5);
+        break;
+      case UP:
+        selected_character.move_up(5);
+        break;
+      case DOWN:
+        selected_character.move_down(5);
+        break;
     }    
   }
   //switch(scene) {
