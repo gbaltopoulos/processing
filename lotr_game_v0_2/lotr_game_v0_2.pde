@@ -48,12 +48,14 @@ void setup() {
   logo.setNext(select_char);
 }
 
-Char selected_character = gandalf;
+Char selected_character = null;
 
 void draw() {
   current_scene.draw();
-  selected_character.draw();
-  if(keyPressed) {
+  if (selected_character != null) {
+    selected_character.draw();
+  }
+  if(keyPressed && selected_character != null) {
     switch (keyCode) {
       case RIGHT:
         selected_character.move_right(5);
