@@ -1,4 +1,3 @@
-
 Aragorn aragorn = new Aragorn("Aragorn", 110, 250);
 Frodo frodo = new Frodo("Frodo", 40, 250);
 Gandalf gandalf = new Gandalf("Gandalf", 180, 250);
@@ -73,9 +72,6 @@ void draw() {
   }
 }
 int scene = 0;
-//void mouseClicked(){
-//  scene += 1;
-//}
 
 void mouseClicked() {
   if (current_scene.next != null) {
