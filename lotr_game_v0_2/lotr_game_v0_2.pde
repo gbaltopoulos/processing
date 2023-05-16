@@ -69,20 +69,6 @@ void draw() {
         break;
     }    
   }
-  //switch(scene) {
-  //  case 1:
-  //    scene_5();
-  //    break;
-  //  case 2:
-  //    scene1();
-  //    break;
-  //  case 3:
-  //    level_1.draw();
-  //    break;
-  //}
-  //scene1();
-
-  //level_1.draw();
 }
 int scene = 0;
 //void mouseClicked(){
