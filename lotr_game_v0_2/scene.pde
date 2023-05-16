@@ -4,7 +4,7 @@ class Scene {
   Scene next;
   
   Scene(String name, Scene previous, Scene next) {
-    this.name = name; //<>//
+    this.name = name; //<>// //<>//
     this.previous = previous;
     this.next = next;
   }
@@ -25,7 +25,7 @@ class Scene {
 class LogoScene extends Scene {
   
   LogoScene(Scene previous, Scene next) {
-    super("Logo scene", previous, next); //<>//
+    super("Logo scene", previous, next); //<>// //<>//
   }
   
   void draw() {
@@ -35,7 +35,7 @@ class LogoScene extends Scene {
 
 class CharacterSelection extends Scene {
   CharacterSelection(Scene previous, Scene next) {
-    super("Character selection", previous, next); //<>//
+    super("Character selection", previous, next); //<>// //<>//
   }
   
   void draw() {

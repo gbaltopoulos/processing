@@ -14,7 +14,7 @@ class Gandalf extends Char {
     rect(x,y,w,h);
     
     //cloak
-    fill(4, 120, 133); //<>//
+    fill(4, 120, 133); //<>// //<>//
     rect(x,y+w,w,h-w/1.5);
     //hat+beard
     fill(108, 137, 140);
