@@ -48,7 +48,7 @@ void setup() {
   logo.setNext(select_char);
 }
 
-Char selected_character = legolas;
+Char selected_character = gandalf;
 
 void draw() {
   current_scene.draw();
