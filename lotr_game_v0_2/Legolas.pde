@@ -12,7 +12,7 @@ class Legolas extends Char {
     fill(247, 217, 107);
     rect(x, y, w, h);
     //shirt
-    fill(54, 35, 0);
+    fill(0, 87, 4);
     rect(x, y+w, w, h-w/1.5);
     //eyes
     //left
@@ -25,8 +25,8 @@ class Legolas extends Char {
     rect(x+h/8, y+h/10*4, h/3, h/14);
     //hair
     fill(234, 255, 43);
-    rect(x, y, w, h-h/5*4);
-    rect(x-1, y, w-25, h-h/5*4+27);
-    rect(x+25, y, w-25, h-h/5*4+27);
+    rect(x, y, w, h-h/5*4-0);
+    rect(x+0, y, w-26, h-h/5*4+30);
+    rect(x+26, y, w-26, h-h/5*4+30);
   }
 }

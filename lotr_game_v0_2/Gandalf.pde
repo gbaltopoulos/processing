@@ -20,7 +20,7 @@ class Gandalf extends Char { //<>//
     fill(108, 137, 140);
     rect(x-5, y, w+10, h-h/5*4);
     triangle(x, y, x+15, y-30, x+30, y);
-    rect(x, y+26, w+-1, h-h/5*3);
+    rect(x, y+20, w, h-h/5*3);
     //eyes
     //left
     fill(0, 49, 84);
