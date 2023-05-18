@@ -16,9 +16,10 @@ void scene1() {
   background(255, 0, 0);
   fill(33, 33, 33);
   rect(0, 310, 400, 20);
-
+  textSize(50);
   text("PICK ONE", 113, 80);
-  text("Frodo, Aragorn, Gandalf, Legolas, Gimli", 19, 191);
+  textSize(20);
+  text("Frodo, Aragorn, Gandalf, Legolas, Gimli", 35, 191);
 
   manageButtons();
 
@@ -54,21 +55,21 @@ void draw() {
   if (selected_character != null) {
     selected_character.draw();
   }
-  if(keyPressed && selected_character != null) {
+  if (keyPressed && selected_character != null) {
     switch (keyCode) {
-      case RIGHT:
-        selected_character.move_right(2);
-        break;
-      case LEFT:
-        selected_character.move_left(2);
-        break;
-      case UP:
-        selected_character.move_up(2);
-        break;
-      case DOWN:
-        selected_character.move_down(2);
-        break;
-    }    
+    case RIGHT:
+      selected_character.move_right(2);
+      break;
+    case LEFT:
+      selected_character.move_left(2);
+      break;
+    case UP:
+      selected_character.move_up(2);
+      break;
+    case DOWN:
+      selected_character.move_down(2);
+      break;
+    }
   }
 }
 int scene = 0;
