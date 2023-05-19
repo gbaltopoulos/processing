@@ -22,17 +22,10 @@ class Button {
     Boolean is_clicked_xdim = mouseX > this.x && mouseX < (this.x +this.w);
     Boolean is_clicked_ydim = mouseY > this.y && mouseY < (this.y + this.h);
     Boolean is_clicked = is_clicked_xdim && is_clicked_ydim;
-    if (is_clicked == true) {
-      return true;
-    }else{
-      return false;
-     }
+    return is_clicked;
   }
   void on_click() {
-    Boolean is_clicked_xdim = mouseX > this.x && mouseX < (this.x +this.w);
-    Boolean is_clicked_ydim = mouseY > this.y && mouseY < (this.y + this.h);
-    Boolean is_clicked = is_clicked_xdim && is_clicked_ydim;
-    if (is_clicked) {
+    if (this.is_clicked()){
       scene2();
     }
   }
