@@ -37,17 +37,18 @@ void scene1() {
   button4.draw();
 }
 
-Level level_1 = new Level("Level", layout1(), null, null);
 Scene logo = new LogoScene(null, null);
-
 Scene select_char = new CharacterSelection(logo, null);
-
+Level level_1 = new Level("Level", layout1(), select_char, null);
+Level level_2 = new Level("Level2", layout2(), level_1, null);
 Scene current_scene = logo;
 
 
 void setup() {
   size(400, 400);
   logo.setNext(select_char);
+  select_char.setNext(level_1);
+  level_1.setNext(level_2);
 }
 
 Char selected_character = null;
@@ -87,7 +88,7 @@ void manageButtons() {
     for(int i=0; i < all_buttons.length; i++) {
       Button btn = all_buttons[i]; 
       if(btn.is_clicked()) {
-        println(btn.c.name + " clicked!");
+        selected_character = btn.c;
       }
     }
     //button.on_click();
