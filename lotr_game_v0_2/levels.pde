@@ -1,4 +1,4 @@
-class Level extends Scene{
+class Level extends Scene {
   String level_name;
   int[][] layout;
   

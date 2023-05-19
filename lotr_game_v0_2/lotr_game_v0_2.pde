@@ -3,11 +3,13 @@ Frodo frodo = new Frodo("Frodo", 40, 250);
 Gandalf gandalf = new Gandalf("Gandalf", 180, 250);
 Char legolas = new Legolas("Legolas", 250, 250);
 Gimli gimli = new Gimli("Gimli", 320, 250);
-Button button=new Button ("click", 110, 200, 40, 15);
-Button button1=new Button ("click", 40, 200, 40, 15);
-Button button2=new Button ("click", 180, 200, 40, 15);
-Button button3=new Button ("click", 320, 200, 40, 15);
-Button button4=new Button ("click", 250, 200, 40, 15);
+Button button=new Button (aragorn, "click", 110, 200, 40, 15);
+Button button1=new Button (frodo,"click", 40, 200, 40, 15);
+Button button2=new Button (gandalf,"click", 180, 200, 40, 15);
+Button button3=new Button (gimli,"click", 320, 200, 40, 15);
+Button button4=new Button (legolas,"click", 250, 200, 40, 15);
+
+Button[] all_buttons = { button, button1, button2, button3, button4 };
 
 void scene2() {
   background(127, 200, 219);
@@ -82,6 +84,12 @@ void mouseClicked() {
 
 void manageButtons() {
   if (mousePressed == true) {
-    button.on_click();
+    for(int i=0; i < all_buttons.length; i++) {
+      Button btn = all_buttons[i]; 
+      if(btn.is_clicked()) {
+        println(btn.c.name + " clicked!");
+      }
+    }
+    //button.on_click();
   }
 }

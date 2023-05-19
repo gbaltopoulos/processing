@@ -1,9 +1,11 @@
 class Button {
   String label;
   float x, y, w, h;
+  Char c;
 
-  Button(String label, float x, float y, float w, float h) {
+  Button(Char c, String label, float x, float y, float w, float h) {
     this.label=label;
+    this.c = c;
     this.x = x;
     this.y = y;
     this.w = w;
@@ -15,6 +17,16 @@ class Button {
     rect(this.x, this.y, this.w, this.h);
     fill(255);
     text(this.label, this.x+5, this.y+10);
+  }
+  boolean is_clicked() {
+    Boolean is_clicked_xdim = mouseX > this.x && mouseX < (this.x +this.w);
+    Boolean is_clicked_ydim = mouseY > this.y && mouseY < (this.y + this.h);
+    Boolean is_clicked = is_clicked_xdim && is_clicked_ydim;
+    if (is_clicked == true) {
+      return true;
+    }else{
+      return false;
+     }
   }
   void on_click() {
     Boolean is_clicked_xdim = mouseX > this.x && mouseX < (this.x +this.w);
